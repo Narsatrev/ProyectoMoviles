@@ -16,7 +16,7 @@ class SobreNosotrosViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    @IBAction func regresar(sender: AnyObject) {
+    @IBAction func cerrar(sender: AnyObject) {
         self.presentingViewController?.dismissViewControllerAnimated(true,completion:nil);
     }
     override func didReceiveMemoryWarning() {
