@@ -15,6 +15,7 @@
 		4271D8581C7559A300922C4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4271D8561C7559A300922C4F /* LaunchScreen.storyboard */; };
 		4271D8631C7559A300922C4F /* ProyectoMovilesWebsemanticaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4271D8621C7559A300922C4F /* ProyectoMovilesWebsemanticaTests.swift */; };
 		4271D86E1C7559A300922C4F /* ProyectoMovilesWebsemanticaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4271D86D1C7559A300922C4F /* ProyectoMovilesWebsemanticaUITests.swift */; };
+		4271D87C1C756FB900922C4F /* SobreNosotrosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4271D87B1C756FB900922C4F /* SobreNosotrosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		4271D8691C7559A300922C4F /* ProyectoMovilesWebsemanticaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProyectoMovilesWebsemanticaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4271D86D1C7559A300922C4F /* ProyectoMovilesWebsemanticaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProyectoMovilesWebsemanticaUITests.swift; sourceTree = "<group>"; };
 		4271D86F1C7559A300922C4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4271D87B1C756FB900922C4F /* SobreNosotrosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SobreNosotrosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				4271D8541C7559A300922C4F /* Assets.xcassets */,
 				4271D8561C7559A300922C4F /* LaunchScreen.storyboard */,
 				4271D8591C7559A300922C4F /* Info.plist */,
+				4271D87B1C756FB900922C4F /* SobreNosotrosViewController.swift */,
 			);
 			path = ProyectoMovilesWebsemantica;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				4271D8501C7559A300922C4F /* SecondViewController.swift in Sources */,
 				4271D84C1C7559A300922C4F /* AppDelegate.swift in Sources */,
 				4271D84E1C7559A300922C4F /* FirstViewController.swift in Sources */,
+				4271D87C1C756FB900922C4F /* SobreNosotrosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
