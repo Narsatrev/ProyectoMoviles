@@ -43,7 +43,7 @@ class TableViewController: UITableViewController {
         let sigVista=segue.destinationViewController as! ndTableViewController
         let indice=self.tableView.indexPathForSelectedRow?.row
         sigVista.detalle=datos[indice!]
-        print(datos[indice!])
+        
         switch datos[indice!]{
         case "Frida Kahlo":
             sigVista.datos2=frida

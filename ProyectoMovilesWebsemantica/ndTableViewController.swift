@@ -7,14 +7,29 @@
 //
 
 import UIKit
+import ImageIO
 
 class ndTableViewController: UITableViewController {
     var detalle:String=""
     var datos2:[String]=[]
     let identificador = "Identificador"
+     var descripciones:[String]=["También conocido como la Casa Azul, es de los sitios turísticos y culturales más representativos de la zona; la casa perteneció a la familia Kahlo desde el año 1904 y fue en 1958 cuando fue convertida en museo, cuatro años después de la muerte de la pintora.","Diego Rivera (Guanajuato, 8 de diciembre de 1886 — Ciudad de México, 24 de noviembre de 1957)1 fue un destacado muralista mexicano de ideología comunista, famoso por plasmar obras de alto contenido social en edificios públicos","Este modelo educativo integra la formación del bachillerato con el estudio de asignaturas provenientes de cinco áreas artísticas.","El agua (H2O) es un compuesto químico inorgánico formado por dos átomos de hidrógeno (H) y uno de oxígeno (O). Esta molécula es esencial en la vida de los seres vivos, al servir de medio para el metabolismo de las biomoléculas y se encuentra en la naturaleza en sus tres estados.","Sacmex es un organismo mexicano público que actúa en el área de servicios de saneamiento, el cual esta sectorizado en la Secretaría del Medio Ambiente. ","El ciclo hidrológico o ciclo del agua es un ciclo biogeoquímico, en el cual hay un proceso de circulación del agua entre las distintas partes de la hidrósfera, permitiendo al agua pasar de un estado físico a otro mediante reacciones químicas."]
+    var picture:[String] = [
+       "casaAzul",
+       "diegoR",
+        "cedart",
+        "mol",
+        "sacmx",
+      "ciclo"  ]
+
+    
+    
+    
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -22,6 +37,51 @@ class ndTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let sigVista=segue.destinationViewController as! detalleController
+        let indice=self.tableView.indexPathForSelectedRow?.row
+        print(datos2[indice!])
+        sigVista.detalle=datos2[indice!]
+        
+        switch datos2[indice!]{
+        case "Casa Azul":
+            sigVista.detalle=datos2[indice!]
+            sigVista.descripcion=descripciones[0]
+            sigVista.pimagen=picture[0]
+            
+            
+        case "Diego rivera":
+            sigVista.detalle=datos2[indice!]
+            sigVista.descripcion=descripciones[1]
+            sigVista.pimagen=picture[1]
+            
+        case "cedart":
+            sigVista.detalle=datos2[indice!]
+            sigVista.descripcion=descripciones[2]
+            sigVista.pimagen=picture[2]
+            
+        case "Composición molecular":
+            sigVista.detalle=datos2[indice!]
+            sigVista.descripcion=descripciones[3]
+            sigVista.pimagen=picture[3]
+            
+        case "SACMX":
+            sigVista.detalle=datos2[indice!]
+            sigVista.descripcion=descripciones[4]
+            sigVista.pimagen=picture[4]
+            
+        case "Ciclo del agua":
+            sigVista.detalle=datos2[indice!]
+            sigVista.descripcion=descripciones[5]
+            sigVista.pimagen=picture[5]
+            
+        default:
+            break
+        }
+        
+    }
+
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
