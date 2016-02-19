@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		334698311C76CC2000CEF9CA /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334698301C76CC2000CEF9CA /* TableViewController.swift */; };
+		334698331C76CC2A00CEF9CA /* ndTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334698321C76CC2A00CEF9CA /* ndTableViewController.swift */; };
 		4271D84C1C7559A300922C4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4271D84B1C7559A300922C4F /* AppDelegate.swift */; };
 		4271D84E1C7559A300922C4F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4271D84D1C7559A300922C4F /* FirstViewController.swift */; };
 		4271D8501C7559A300922C4F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4271D84F1C7559A300922C4F /* SecondViewController.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		334698301C76CC2000CEF9CA /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		334698321C76CC2A00CEF9CA /* ndTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ndTableViewController.swift; sourceTree = "<group>"; };
 		4271D8481C7559A200922C4F /* ProyectoMovilesWebsemantica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProyectoMovilesWebsemantica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4271D84B1C7559A300922C4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4271D84D1C7559A300922C4F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 		4271D84A1C7559A200922C4F /* ProyectoMovilesWebsemantica */ = {
 			isa = PBXGroup;
 			children = (
+				334698321C76CC2A00CEF9CA /* ndTableViewController.swift */,
+				334698301C76CC2000CEF9CA /* TableViewController.swift */,
 				4271D84B1C7559A300922C4F /* AppDelegate.swift */,
 				4271D84D1C7559A300922C4F /* FirstViewController.swift */,
 				4271D84F1C7559A300922C4F /* SecondViewController.swift */,
@@ -266,8 +272,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4271D8501C7559A300922C4F /* SecondViewController.swift in Sources */,
+				334698331C76CC2A00CEF9CA /* ndTableViewController.swift in Sources */,
 				4271D84C1C7559A300922C4F /* AppDelegate.swift in Sources */,
 				4271D84E1C7559A300922C4F /* FirstViewController.swift in Sources */,
+				334698311C76CC2000CEF9CA /* TableViewController.swift in Sources */,
 				4271D87C1C756FB900922C4F /* SobreNosotrosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,6 +503,7 @@
 				4271D8741C7559A300922C4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4271D8751C7559A300922C4F /* Build configuration list for PBXNativeTarget "ProyectoMovilesWebsemanticaTests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +512,7 @@
 				4271D8771C7559A300922C4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4271D8781C7559A300922C4F /* Build configuration list for PBXNativeTarget "ProyectoMovilesWebsemanticaUITests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +521,7 @@
 				4271D87A1C7559A300922C4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

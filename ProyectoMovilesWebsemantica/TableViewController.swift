@@ -15,6 +15,18 @@ class TableViewController: UITableViewController {
     private let frida = [
         "Casa Azul","Diego rivera", "cedart"
     ]
+    private let agua = [
+        "Composición molecular","SACMX", "Ciclo del agua"
+    ]
+    private let swift = [
+        "Coursera: ITESM Swift","Apple México", "martinmolina.net"
+    ]
+    private let garcia = [
+        "Creacionismo","Generación del 27", "Literatura española contemporánea"
+    ]
+    private let cromo = [
+        "Genoma Humano","INMEGEN", "Cromosoma Y prescindible"
+    ]
     
     let identificador = "Identificador"
 
@@ -31,7 +43,22 @@ class TableViewController: UITableViewController {
         let sigVista=segue.destinationViewController as! ndTableViewController
         let indice=self.tableView.indexPathForSelectedRow?.row
         sigVista.detalle=datos[indice!]
-        sigVista.datos2=frida
+        print(datos[indice!])
+        switch datos[indice!]{
+        case "Frida Kahlo":
+            sigVista.datos2=frida
+        case "Agua":
+            sigVista.datos2=agua
+        case "Swift":
+            sigVista.datos2=swift
+        case "García Marquez":
+            sigVista.datos2=garcia
+        case "Cromosomas":
+            sigVista.datos2=cromo
+        default:
+            break
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
