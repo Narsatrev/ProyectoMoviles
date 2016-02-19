@@ -58,44 +58,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fodno2" translatesAutoresizingMaskIntoConstraints="NO" id="eXs-jO-ZL7">
+                                <rect key="frame" x="-17" y="-20" width="361" height="588"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Miembros" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDN-Eh-Eue">
-                                <rect key="frame" x="123" y="289" width="77" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <rect key="frame" x="122" y="285" width="77" height="21"/>
+                                <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="17"/>
+                                <color key="textColor" red="0.18085132370000001" green="0.30149709930000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Carla Lorena Flores Subias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4R-06-9VC">
-                                <rect key="frame" x="183" y="444" width="204" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <rect key="frame" x="61" y="372" width="204" height="21"/>
+                                <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="17"/>
+                                <color key="textColor" red="0.045736164310000001" green="0.60816680479999996" blue="0.73018242799999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="José David Manzanarez Velázquez" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SG0-UM-5cT">
-                                <rect key="frame" x="163" y="354" width="274" height="90"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <rect key="frame" x="32" y="335" width="274" height="38"/>
+                                <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="17"/>
+                                <color key="textColor" red="0.045736164310000001" green="0.60816680479999996" blue="0.73018242799999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Benjamín Gil Mendoza " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOB-iN-rFx">
+                                <rect key="frame" x="76" y="314" width="174" height="21"/>
+                                <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="17"/>
+                                <color key="textColor" red="0.045736164310000001" green="0.60816680479999996" blue="0.73018242799999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="hiH-wG-Eks">
+                                <rect key="frame" x="20" y="89" width="286" height="142"/>
+                                <string key="text">Somos un equipo de estudiantes del Tecnológico de Monterrey, Campus Ciudad de México. Esta aplicación se desarrolló como proyecto final de la materia de Proyecto de desarrollo para dispositivos  móviles</string>
+                                <color key="textColor" red="0.093698115955907074" green="0.15798942588499268" blue="0.53914430628272259" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YM2-e1-Ha9">
-                                <rect key="frame" x="232" y="481" width="62" height="30"/>
-                                <state key="normal" title="Regresar"/>
+                                <rect key="frame" x="26" y="470" width="98" height="30"/>
+                                <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="18"/>
+                                <state key="normal" title="Regresar">
+                                    <color key="titleColor" red="0.18085132370000001" green="0.30149709930000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="cerrar:" destination="zJa-Eb-l3T" eventType="touchUpInside" id="BWo-s7-x0Z"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Benjamín Gil Mendoza " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOB-iN-rFx">
-                                <rect key="frame" x="198" y="325" width="174" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="hiH-wG-Eks">
-                                <rect key="frame" x="17" y="70" width="286" height="133"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Somos un equipo de estudiantes del Tecnológico de Monterrey, Campus Ciudad de México. Esta aplicación se desarrolló como proyecto final de la materia de Proyecto de desarrollo para dispositivos  móviles</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -103,6 +109,7 @@
                             <constraint firstItem="hiH-wG-Eks" firstAttribute="centerX" secondItem="G6u-AT-zad" secondAttribute="centerX" id="4h1-Ds-plg"/>
                             <constraint firstItem="Q4R-06-9VC" firstAttribute="centerX" secondItem="G6u-AT-zad" secondAttribute="centerX" id="IEo-Ra-3Sz"/>
                             <constraint firstItem="SG0-UM-5cT" firstAttribute="centerX" secondItem="G6u-AT-zad" secondAttribute="centerX" id="a9L-5R-KaO"/>
+                            <constraint firstItem="YM2-e1-Ha9" firstAttribute="centerX" secondItem="G6u-AT-zad" secondAttribute="centerX" constant="-85" id="fnX-vh-phd"/>
                             <constraint firstItem="JDN-Eh-Eue" firstAttribute="centerX" secondItem="G6u-AT-zad" secondAttribute="centerX" id="szA-6u-LjA"/>
                             <constraint firstItem="UOB-iN-rFx" firstAttribute="centerX" secondItem="G6u-AT-zad" secondAttribute="centerX" id="tXr-ZJ-a5V"/>
                         </constraints>
@@ -112,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zvg-D7-q1a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="780.79999999999995" y="-302.93333333333334"/>
+            <point key="canvasLocation" x="780" y="-303"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -247,6 +254,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="fodno2" width="1000" height="1667"/>
         <image name="fondo" width="1667" height="1667"/>
         <image name="grafica" width="40" height="40"/>
         <image name="info" width="40" height="40"/>
