@@ -8,12 +8,19 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class TableViewController: UITableViewController,UISearchBarDelegate {
+    
+    @IBOutlet weak var barraBusqueda: UISearchBar!
+    
+    @IBOutlet var tablaCompleta: UITableView!
+    var buscando : Bool = false
+    var filtroBusqueda:[String] = []
+    
     private let datos = [
         "Frida Kahlo","Agua", "Swift","García Marquez","Cromosomas"
     ]
     private let frida = [
-        "Casa Azul","Diego rivera", "cedart"
+        "Casa Azul","Diego Rivera", "CEDART"
     ]
     private let agua = [
         "Composición molecular","SACMX", "Ciclo del agua"
@@ -32,13 +39,27 @@ class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        tablaCompleta.delegate = self
+        tablaCompleta.dataSource = self
+        barraBusqueda.delegate = self
     }
+    
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        buscando = true;
+    }
+    
+    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+        buscando = false;
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        buscando = false;
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        buscando = false;
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let sigVista=segue.destinationViewController as! ndTableViewController
         let indice=self.tableView.indexPathForSelectedRow?.row
@@ -61,12 +82,25 @@ class TableViewController: UITableViewController {
         
     }
 
+
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        filtroBusqueda = datos.filter({ (text) -> Bool in
+            let tmp: NSString = text
+            let range = tmp.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+            return range.location != NSNotFound
+        })
+        if(filtroBusqueda.count == 0){
+            buscando = false;
+        } else {
+            buscando = true;
+        }
+        self.tableView.reloadData()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-    // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -74,63 +108,21 @@ class TableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return datos.count
-    }
-
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier(identificador)
-        if (cell == nil) {
-            cell = UITableViewCell(
-                style: UITableViewCellStyle.Default, reuseIdentifier: identificador)
+        if(buscando) {
+            return filtroBusqueda.count
         }
-        cell?.textLabel?.text=datos[indexPath.row]
-        return cell! }
+        return datos.count;
+    }
     
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tablaCompleta.dequeueReusableCellWithIdentifier(identificador)! as UITableViewCell;
+        if(buscando){
+            cell.textLabel?.text = filtroBusqueda[indexPath.row]
+        } else {
+            cell.textLabel?.text = datos[indexPath.row];
+        }
+        return cell;
     }
-    */
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

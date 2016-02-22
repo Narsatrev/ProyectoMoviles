@@ -9,7 +9,15 @@
 import UIKit
 import ImageIO
 
-class ndTableViewController: UITableViewController {
+class ndTableViewController: UITableViewController, UISearchBarDelegate{
+    
+    @IBOutlet weak var barraBusqueda: UISearchBar!
+    
+    @IBOutlet var tablaCompleta: UITableView!
+    
+    var buscando : Bool = false
+    var filtroBusqueda:[String] = []
+    
     var detalle:String=""
     var datos2:[String]=[]
     let identificador = "Identificador"
@@ -22,15 +30,12 @@ class ndTableViewController: UITableViewController {
         "sacmx",
       "ciclo"  ]
 
-    
-    
-    
-   
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        tablaCompleta.delegate = self
+        tablaCompleta.dataSource = self
+        barraBusqueda.delegate = self
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -50,12 +55,12 @@ class ndTableViewController: UITableViewController {
             sigVista.pimagen=picture[0]
             
             
-        case "Diego rivera":
+        case "Diego Rivera":
             sigVista.detalle=datos2[indice!]
             sigVista.descripcion=descripciones[1]
             sigVista.pimagen=picture[1]
             
-        case "cedart":
+        case "CEDART":
             sigVista.detalle=datos2[indice!]
             sigVista.descripcion=descripciones[2]
             sigVista.pimagen=picture[2]
@@ -74,11 +79,24 @@ class ndTableViewController: UITableViewController {
             sigVista.detalle=datos2[indice!]
             sigVista.descripcion=descripciones[5]
             sigVista.pimagen=picture[5]
-            
         default:
             break
         }
         
+    }
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        filtroBusqueda = datos2.filter({ (text) -> Bool in
+            let tmp: NSString = text
+            let range = tmp.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+            return range.location != NSNotFound
+        })
+        if(filtroBusqueda.count == 0){
+            buscando = false;
+        } else {
+            buscando = true;
+        }
+        self.tableView.reloadData()
     }
 
     
@@ -96,18 +114,21 @@ class ndTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return datos2.count
-    }
-
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier(identificador)
-        if (cell == nil) {
-            cell = UITableViewCell(
-                style: UITableViewCellStyle.Default, reuseIdentifier: identificador)
+        if(buscando) {
+            return filtroBusqueda.count
         }
-        cell?.textLabel?.text=datos2[indexPath.row]
-        return cell! }
+        return datos2.count;
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tablaCompleta.dequeueReusableCellWithIdentifier(identificador)! as UITableViewCell;
+        if(buscando){
+            cell.textLabel?.text = filtroBusqueda[indexPath.row]
+        } else {
+            cell.textLabel?.text = datos2[indexPath.row];
+        }
+        return cell;
+    }
 
     /*
     // Override to support conditional editing of the table view.

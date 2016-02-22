@@ -208,7 +208,7 @@
 				TargetAttributes = {
 					4271D8471C7559A200922C4F = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = AG5KY34Z9A;
+						DevelopmentTeam = 6UQ4R6Z493;
 					};
 					4271D85D1C7559A300922C4F = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -422,10 +422,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ProyectoMovilesWebsemantica/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = itc.itesm.ccm.ProyectoMovilesWebsemantica;
+				PRODUCT_BUNDLE_IDENTIFIER = itc.itesm.ccm.ProyectoMovilesWebsemantica.v2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -433,10 +436,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ProyectoMovilesWebsemantica/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = itc.itesm.ccm.ProyectoMovilesWebsemantica;
+				PRODUCT_BUNDLE_IDENTIFIER = itc.itesm.ccm.ProyectoMovilesWebsemantica.v2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
